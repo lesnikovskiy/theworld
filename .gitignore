@@ -1,0 +1,5 @@
+.vs
+.vscode
+TheWorld/bin
+TheWorld/obj
+TheWorld/node_modules
