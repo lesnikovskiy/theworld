@@ -16,7 +16,6 @@ namespace TheWorld.Controllers.Web
 
         public IActionResult Contact()
         {
-            throw new ArgumentException("Bad things happen to good developers");
             return View();
         }
 
