@@ -33,7 +33,13 @@ namespace TheWorld.Controllers.Web
                 ModelState.AddModelError("Email", "We don't support aol addresses");
 
             if (ModelState.IsValid)
+            {
                 _mailService.SendMail(_config["MailSettings:ToAddress"], model.Email, "From the World", model.Message);
+
+                ModelState.Clear();
+
+                ViewBag.UserMessage = "Message Sent";
+            }
 
             return View();
         }
